@@ -16,7 +16,7 @@ COPY . .
 # CGO_ENABLED=0 禁用 CGO，生成静态链接的二进制文件
 # -o main 指定输出文件名为 main
 # ./cmd/main.go 指定主入口文件
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main ./cmd/main.go
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o dify2wxbot ./cmd/main.go
 
 # 使用一个轻量级的 Alpine 镜像作为最终运行镜像
 FROM alpine:latest
@@ -25,7 +25,7 @@ FROM alpine:latest
 WORKDIR /root/
 
 # 从构建阶段复制编译好的二进制文件
-COPY --from=builder /app/main .
+COPY --from=builder /app/dify2wxbot .
 
 # 复制配置文件目录
 COPY config ./config
@@ -34,4 +34,4 @@ COPY config ./config
 EXPOSE 8080
 
 # 运行应用程序
-CMD ["./main"]
+CMD ["./dify2wxbot"]

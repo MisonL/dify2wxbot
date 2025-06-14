@@ -1,13 +1,13 @@
-# 应用配置示例
+# 应用配置示例 (复制为config.yaml使用)
 dify:
   api_key: ${DIFY_API_KEY}  # 必须通过环境变量设置
-  base_url: "https://ai.qdama.cn"  # 必须使用HTTPS协议
+  base_url: "https://api.dify.ai"  # 官方API地址(私有部署请修改为实际地址)
   bot_type: "chat" # Dify 应用类型: "chat", "completion", "workflow"
   workflow_id: "" # 如果 bot_type 为 "workflow"，此处填写工作流ID
   default_prompt: "你好，我是Dify AI助手，有什么可以帮助你的吗？" # 默认提示词，用于定时任务或无消息时的默认输入
 
 wecom:
-  webhook_url: ${WECHAT_WEBHOOK_URL}  # 完整的Webhook URL(包含key参数)
+  webhook_url: ${WECHAT_WEBHOOK_URL}  # 完整的Webhook URL
 
 auth_token: ${AUTH_TOKEN} # 用于 Webhook 认证的 Token，必须通过环境变量设置
 enable_auth: false # 是否开启认证Token功能，默认关闭
