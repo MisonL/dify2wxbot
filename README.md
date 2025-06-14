@@ -180,21 +180,28 @@ curl -X POST http://localhost:8080/webhook \
 
 ```bash
 .
+├── .gitignore      # Git 忽略文件配置
+├── Dockerfile      # Docker 镜像构建文件
+├── go.mod          # Go 模块定义文件
+├── LICENSE         # 项目许可证
+├── LICENSE_zh-CN   # 项目许可证 (中文)
+├── README.md       # 项目说明文件 (自身)
 ├── cmd/            # 主程序入口，包含 main 函数
 │   └── main.go
-├── config/         # 应用程序配置相关文件
-│   ├── config.go   # 配置结构体和加载逻辑
-│   └── config.yaml # 配置文件示例
-├── internal/       # 内部实现，不应被外部包直接引用
-│   ├── handler/    # HTTP 请求处理器，例如 Webhook 处理
-│   │   └── webhook.go
-│   └── service/    # 业务逻辑服务层
-│       ├── converter.go # 消息转换和发送服务
-│       └── dify_service.go # Dify API 交互服务
-├── pkg/            # 可复用包，可被内部或外部引用
-│   └── wecom/      # 企业微信机器人 API 封装
-│       └── robot.go
-└── README.md
+├── docs/           # 文档目录
+│   ├── dify_api_documentation_full.md # Dify API 完整文档
+│   └── wecom_robot_config.md # 企业微信机器人配置文档
+└── internal/       # 内部实现，不应被外部包直接引用
+    ├── config/     # 应用程序配置相关文件
+    │   ├── config.go   # 配置结构体和加载逻辑
+    │   └── config.yaml # 配置文件示例
+    ├── handler/    # HTTP 请求处理器，例如 Webhook 处理
+    │   └── webhook.go
+    ├── service/    # 业务逻辑服务层
+    │   ├── converter.go # 消息转换和发送服务
+    │   └── dify_service.go # Dify API 交互服务
+    └── store/      # 数据存储层
+        └── conversation_store.go # 对话上下文存储
 
 ## 关于
 
