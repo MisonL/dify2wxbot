@@ -19,8 +19,14 @@ import (
 	"gopkg.in/natefinch/lumberjack.v2" // 导入 lumberjack 包，用于日志文件轮转和管理
 )
 
+// Version 应用程序版本号
+var Version = "v1.0.0" // 当前版本号
+
 // main 函数是程序的入口点，负责初始化和启动各项服务
 func main() {
+	// 打印应用程序版本信息
+	fmt.Printf("Dify2WxBot 应用程序版本: %s\n", Version)
+
 	// 加载应用程序配置
 	cfg, err := config.LoadConfig()
 	if err != nil {
