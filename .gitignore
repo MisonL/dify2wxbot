@@ -1,0 +1,25 @@
+# Go 编译输出
+main
+
+# macOS 系统文件
+.DS_Store
+
+# Go 模块依赖校验和
+go.sum
+
+# 日志文件
+*.log
+
+# 临时文件
+*~
+
+# 配置文件示例
+*.example
+
+# 编译和构建目录
+/dist/
+/build/
+
+# IDE/编辑器相关文件 (如果存在)
+.vscode/
+.idea/
