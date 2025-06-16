@@ -31,7 +31,7 @@ COPY --from=builder /app/dify2wxbot .
 COPY config ./config
 
 # 暴露应用程序监听的端口
-EXPOSE 8080
+EXPOSE 7860
 
 # 运行应用程序
 CMD ["./dify2wxbot"]
