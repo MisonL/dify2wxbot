@@ -1,6 +1,10 @@
+<div align="center">
+
 # Dify to WeCom Bot
 
 ![Go Version](https://img.shields.io/badge/Go-1.21%2B-00ADD8?style=for-the-badge&logo=go) ![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge) ![Version](https://img.shields.io/badge/Version-v1.0.0-blue.svg?style=for-the-badge)
+
+</div>
 
 一个 Go 语言服务，用于调用 Dify API 获取 AI 响应，并将响应消息转发到企业微信(WeCom)机器人。
 
